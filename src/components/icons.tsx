@@ -116,6 +116,14 @@ export function IconArrow({ className = "h-4 w-4" }: IconProps) {
  );
 }
 
+export function IconExternal({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5" />
+    </svg>
+  );
+}
+
 export function IconClose({ className = base }: IconProps) {
  return (
  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { t, PHONE, PHONE_HREF } from "@/lib/content";
-import { IconPhone } from "./icons";
+import { t, PHONE, PHONE_HREF, MAIN_SITE } from "@/lib/content";
+import { IconExternal, IconPhone } from "./icons";
 
 export function Logo({ className = "h-9" }: { className?: string }) {
   return (
@@ -65,6 +65,16 @@ export default function Header() {
           <div className="flex items-center gap-2 sm:gap-3">
 
             <a
+              href={MAIN_SITE}
+              target="_blank"
+              rel="noopener"
+              className="hidden lg:inline-flex items-center gap-1.5 border border-stone-300 px-3 py-2 text-xs font-bold uppercase tracking-wide text-stone-600 hover:border-red hover:text-red transition-colors"
+            >
+              {t.nav.mainSite}
+              <IconExternal className="h-3.5 w-3.5" />
+            </a>
+
+            <a
               href={`tel:${PHONE_HREF}`}
               className="hidden sm:inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-red transition-colors"
             >
@@ -109,6 +119,15 @@ export default function Header() {
             ))}
             <a href={`tel:${PHONE_HREF}`} className="py-2 text-base font-bold text-red">
               {PHONE}
+            </a>
+            <a
+              href={MAIN_SITE}
+              target="_blank"
+              rel="noopener"
+              className="mt-2 inline-flex items-center justify-center gap-2 border border-stone-300 py-2.5 text-sm font-bold uppercase tracking-wide text-stone-700"
+            >
+              {t.nav.mainSite} — legi.ge
+              <IconExternal className="h-4 w-4" />
             </a>
           </nav>
         </div>

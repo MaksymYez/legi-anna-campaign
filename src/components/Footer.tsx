@@ -1,4 +1,5 @@
-import { t, PHONE, PHONE_HREF } from "@/lib/content";
+import { t, PHONE, PHONE_HREF, MAIN_SITE } from "@/lib/content";
+import { IconExternal } from "./icons";
 import { Logo } from "./Header";
 
 const socials = [
@@ -10,6 +11,22 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-stone-100 text-stone-600 border-t border-stone-200">
+      {/* Main-site banner */}
+      <div className="bg-ink text-white">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+          <p className="max-w-md text-sm sm:text-base text-white/80">{t.footer.mainSiteText}</p>
+          <a
+            href={MAIN_SITE}
+            target="_blank"
+            rel="noopener"
+            className="group inline-flex items-center justify-center gap-2 bg-red px-6 py-3.5 text-sm sm:text-base font-bold uppercase tracking-wide text-white hover:bg-red-dark transition-colors"
+          >
+            {t.footer.mainSite} — legi.ge
+            <IconExternal className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">

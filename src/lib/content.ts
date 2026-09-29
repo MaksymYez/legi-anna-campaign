@@ -2,6 +2,8 @@
 export const PHONE = "+995 5XX XX XX XX";
 export const PHONE_HREF = "+9955XXXXXXXX";
 
+export const MAIN_SITE = "https://legi.ge";
+
 // Campaign discount applied on top of the regular legi.ge price list.
 export const DISCOUNT = 0.1;
 
@@ -28,6 +30,7 @@ export const t = {
     pricing: "ფასები",
     contact: "კონტაქტი",
     cta: "შეკვეთა",
+    mainSite: "მთავარი საიტი",
   },
   hero: {
     badge: "სპეციალური შეთავაზება",
@@ -87,7 +90,7 @@ export const t = {
         text: "გლუვი ზედაპირი და დახვეწილი ფორმა — იდეალურია ეზოსა და სავალი გზისთვის.",
         regular: 41.5,
         swatch: "#977258",
-        photo: { src: null, alt: "ახალი ქალაქი — კაპუჩინო" } as Photo,
+        photo: { src: "/photos/new-city-cappuccino.webp", alt: "ახალი ქალაქი — კაპუჩინო" } as Photo,
       },
       {
         name: "მიქსი",
@@ -96,7 +99,8 @@ export const t = {
         text: "ოთხი სხვადასხვა ზომის ფილა — ცოცხალი, მრავალფეროვანი ნახატი ერთფეროვნების გარეშე.",
         regular: 40,
         swatch: "#a07c62",
-        photo: { src: null, alt: "მიქსი — კაპუჩინო" } as Photo,
+        // TODO: legi.ge has no Mix Cappuccino shot yet — this is a 60 mm Mix photo in a warmer tone.
+        photo: { src: "/photos/mix-60.webp", alt: "ფილა მიქსი ეზოში" } as Photo,
       },
       {
         name: "Grande",
@@ -105,7 +109,7 @@ export const t = {
         text: "მსხვილფორმატიანი ფილა მინიმალური ნაკერით — თანამედროვე, სუფთა ვიზუალი.",
         regular: 48,
         swatch: "#8c6a52",
-        photo: { src: null, alt: "Grande — კაპუჩინო" } as Photo,
+        photo: { src: "/photos/grande-cappuccino.webp", alt: "Grande — კაპუჩინო" } as Photo,
       },
     ],
   },
@@ -130,5 +134,7 @@ export const t = {
     follow: "გამოგვყევი",
     rights: "ყველა უფლება დაცულია.",
     productLine: "ანა ტყებუჩავა × LEGI",
+    mainSite: "გადადი მთავარ საიტზე",
+    mainSiteText: "ნახე LEGI-ს სრული კატალოგი — ფილები, ბორდიურები და სხვა.",
   },
 };
