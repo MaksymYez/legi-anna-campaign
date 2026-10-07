@@ -62,7 +62,7 @@ function Slider({ pair }: { pair: Pair }) {
   return (
     <div
       ref={ref}
-      className="relative mt-5 aspect-[4/5] sm:aspect-[16/9] select-none overflow-hidden shadow-lift ring-1 ring-stone-200 touch-pan-y cursor-ew-resize"
+      className="relative mt-5 aspect-[3/4] w-full max-w-3xl select-none overflow-hidden shadow-lift ring-1 ring-stone-200 touch-pan-y cursor-ew-resize"
       onPointerDown={(e) => {
         e.currentTarget.setPointerCapture(e.pointerId);
         moveTo(e.clientX);
@@ -72,9 +72,9 @@ function Slider({ pair }: { pair: Pair }) {
       }}
     >
       {/* After = base layer; Before = clipped layer on top */}
-      <Photo photo={pair.after} sizes="(max-width: 1152px) 100vw, 1152px" />
+      <Photo photo={pair.after} sizes="(max-width: 768px) 100vw, 768px" />
       <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-        <Photo photo={pair.before} sizes="(max-width: 1152px) 100vw, 1152px" tone="dark" />
+        <Photo photo={pair.before} sizes="(max-width: 768px) 100vw, 768px" tone="dark" />
       </div>
 
       <span className="pointer-events-none absolute top-4 left-4 bg-ink/85 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white">

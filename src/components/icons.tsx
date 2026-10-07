@@ -133,3 +133,12 @@ export function IconClose({ className = base }: IconProps) {
 }
 
 export const featureIcons = [IconFormat, IconStandard, IconFrost, IconLoad, IconColor, IconLeaf];
+
+export function IconFlame({ className = base }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3c1 3 4 4.5 4 8.5a4 4 0 01-8 0c0-1.5.5-2.5 1.5-3.5.3 1.2 1 2 2 2.5C11 8.5 11.5 5.5 12 3z" />
+      <path d="M8 16.5A6.5 6.5 0 0012 21a6.5 6.5 0 004-4.5" opacity="0.6" />
+    </svg>
+  );
+}

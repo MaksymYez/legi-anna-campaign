@@ -33,6 +33,7 @@ export default function Header() {
 
   const links = [
     { href: "#result", label: t.nav.result },
+    { href: "#firepit", label: t.nav.firepit },
     { href: "#products", label: t.nav.products },
     { href: "#pricing", label: t.nav.pricing },
     { href: "#contact", label: t.nav.contact },
@@ -50,7 +51,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <Logo />
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-5 xl:gap-8">
             {links.map((l) => (
               <a
                 key={l.href}
@@ -79,7 +80,7 @@ export default function Header() {
               className="hidden sm:inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-red transition-colors"
             >
               <IconPhone className="h-4 w-4 text-red" />
-              <span className="hidden lg:inline">{PHONE}</span>
+              <span className="hidden xl:inline">{PHONE}</span>
             </a>
 
             <a

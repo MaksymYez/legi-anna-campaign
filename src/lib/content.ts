@@ -26,6 +26,7 @@ export const t = {
   slogan: "ვქმნით ხარისხს!",
   nav: {
     result: "შედეგი",
+    firepit: "ცეცხლის კერა",
     products: "ფილები",
     pricing: "ფასები",
     contact: "კონტაქტი",
@@ -42,8 +43,8 @@ export const t = {
     ctaSecondary: "ნახე ფასები",
     discountChip: "ფასდაკლება",
     photo: {
-      src: null,
-      alt: "ანა ტყებუჩავას ეზო LEGI-ს კაპუჩინოს ფერის ფილებით და ცეცხლის კერით",
+      src: "/photos/house-after.webp",
+      alt: "ანა ტყებუჩავას ეზო LEGI-ს კაპუჩინოს ფერის ფილებით",
     } as Photo,
     photoCaption: "ანა ტყებუჩავას ეზო · კაპუჩინო",
   },
@@ -55,21 +56,56 @@ export const t = {
     after: "შემდეგ",
     pairs: [
       {
-        label: "ეზო",
-        before: { src: null, alt: "ეზო დაგებამდე" } as Photo,
-        after: { src: null, alt: "ეზო LEGI-ს ფილებით" } as Photo,
-      },
-      {
-        label: "ცეცხლის კერა",
-        before: { src: null, alt: "ცეცხლის კერის ადგილი მოწყობამდე" } as Photo,
-        after: { src: null, alt: "ცეცხლის კერა LEGI-ს ფილებით" } as Photo,
-      },
-      {
         label: "ბილიკი",
-        before: { src: null, alt: "ბილიკი დაგებამდე" } as Photo,
-        after: { src: null, alt: "ბილიკი LEGI-ს ფილებით" } as Photo,
+        before: { src: "/photos/path-before.webp", alt: "ბილიკი სახლის წინ დაგებამდე" } as Photo,
+        after: { src: "/photos/path-after.webp", alt: "ბილიკი LEGI-ს ფილებითა და თეთრი ხრეშით" } as Photo,
+      },
+      {
+        label: "სახლის წინ",
+        before: { src: "/photos/house-before.webp", alt: "სახლის წინა ეზო დაგებამდე" } as Photo,
+        after: { src: "/photos/house-after.webp", alt: "სახლის წინა ეზო LEGI-ს ფილებით" } as Photo,
+      },
+      {
+        label: "ეზო",
+        before: { src: "/photos/yard-before.webp", alt: "ეზო დაგებამდე" } as Photo,
+        after: { src: "/photos/yard-after.webp", alt: "ეზო LEGI-ს ფილებით" } as Photo,
+      },
+      {
+        label: "ტერასა",
+        before: { src: "/photos/terrace-before.webp", alt: "ტერასა დაგებამდე" } as Photo,
+        after: { src: "/photos/terrace-after.webp", alt: "ტერასა LEGI-ს ფილებით" } as Photo,
+      },
+      {
+        label: "ტერასის ხედი",
+        before: { src: "/photos/terrace-view-before.webp", alt: "ხედი ტერასიდან დაგებამდე" } as Photo,
+        after: { src: "/photos/terrace-view-after.webp", alt: "ხედი ტერასიდან LEGI-ს ფილებით" } as Photo,
       },
     ],
+  },
+  firepit: {
+    eyebrow: "ცეცხლის კერა",
+    title: "საღამოები კერის გარშემო",
+    text: "ეზოს განახლებასთან ერთად ანამ ცეცხლის კერაც მოაწყო. LEGI-ს კერა იგივე ფილებით იწყობა, რომლითაც ბილიკი და ტერასაა დაგებული — ერთი მასალა, ერთი სტილი, მთელ ეზოში.",
+    // Showroom shots of the LEGI fire pit (two colourways) — not Ana's yard, so captions name the product, not her.
+    photos: [
+      { src: "/photos/firepit-2.webp", alt: "LEGI-ს ცეცხლის კერა თბილი ტონის ფილებით", caption: "LEGI-ს ცეცხლის კერა · თბილი ტონი" },
+      { src: "/photos/firepit-1.webp", alt: "LEGI-ს ცეცხლის კერა ნაცრისფერი ფილებით", caption: "ნაცრისფერი ვარიანტი" },
+    ] as (Photo & { caption: string })[],
+    points: [
+      {
+        title: "ბეტონი არ იწვის",
+        text: "ბეტონის ფილა ცეცხლის კერის გარშემო უსაფრთხო, არაწვადი საფარია.",
+      },
+      {
+        title: "ადვილი მოვლა",
+        text: "ნაცარი და ნახშირის კვალი ფილიდან უბრალოდ ირეცხება.",
+      },
+      {
+        title: "ერთიანი ხედი",
+        text: "კერა, ბილიკი და ტერასა ერთი ფერის ფილით — ეზო ერთ მთლიანობად იკითხება.",
+      },
+    ],
+    cta: "მინდა ასეთი ეზო",
   },
   pricing: {
     eyebrow: "ფასები",
