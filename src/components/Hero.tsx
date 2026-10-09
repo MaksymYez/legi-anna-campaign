@@ -90,7 +90,7 @@ export default function Hero() {
             <ul className="mt-8 flex max-w-md flex-wrap gap-x-5 gap-y-2 border-t border-stone-200 pt-6 text-sm font-semibold text-stone-600">
               {t.pricing.products.map((p) => (
                 <li key={p.name} className="flex items-center gap-2">
-                  <span className="h-3.5 w-3.5 ring-1 ring-stone-300" style={{ backgroundColor: p.swatch }} />
+                  <span className="h-1.5 w-1.5 bg-red" aria-hidden />
                   {p.name}
                 </li>
               ))}

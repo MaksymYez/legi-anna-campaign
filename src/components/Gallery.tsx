@@ -19,9 +19,9 @@ export default function Gallery() {
           {g.photos.map((photo, i) => (
             <li
               key={photo.src}
-              className={`relative aspect-[3/4] overflow-hidden shadow-soft ring-1 ring-stone-200 ${
-                i === 0 ? "col-span-2 sm:col-span-1" : ""
-              }`}
+              className={`relative overflow-hidden shadow-soft ring-1 ring-stone-200 ${
+                photo.landscape ? "aspect-[4/3]" : "aspect-[3/4]"
+              } ${i === 0 || i === g.photos.length - 1 ? "col-span-2 sm:col-span-1" : ""}`}
             >
               <Photo
                 photo={photo}

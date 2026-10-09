@@ -3,9 +3,9 @@ import { IconExternal } from "./icons";
 import { Logo } from "./Header";
 
 const socials = [
-  { label: "Facebook", href: "https://facebook.com/legi.ge" },
-  { label: "Instagram", href: "https://instagram.com/legi.ge" },
-  { label: "YouTube", href: "https://youtube.com/@legi" },
+  { label: "Facebook", href: "https://www.facebook.com/ltdlegi" },
+  { label: "Instagram", href: "https://www.instagram.com/legi_ltd/" },
+  { label: "YouTube", href: "https://www.youtube.com/@LegiFilebi" },
 ];
 
 export default function Footer() {

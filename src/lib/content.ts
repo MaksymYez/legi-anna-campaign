@@ -86,19 +86,21 @@ export const t = {
     title: "ანა თავის ახალ ეზოში",
     text: "ბილიკი, ტერასა და საღამოს მზე — ასე გამოიყურება ეზო, როცა ფილები უკვე დაგებულია.",
     photos: [
-      { src: "/photos/ana-terrace.webp", alt: "ანა ტყებუჩავა ტერასაზე, წინ LEGI-ს ფილების ბილიკი", position: "50% 35%" },
-      { src: "/photos/ana-selfie.webp", alt: "ანა ტყებუჩავას სელფი ეზოში, უკან ახალი ბილიკი", position: "50% 30%" },
-      { src: "/photos/ana-terrace-standing.webp", alt: "ანა ტყებუჩავა სახლის წინ, LEGI-ს ფილებით დაგებული ეზო", position: "50% 35%" },
-    ] as (Photo & { position: string })[],
+      { src: "/photos/ana-terrace.webp", alt: "ანა ტყებუჩავა ტერასაზე, წინ LEGI-ს ფილების ბილიკი", position: "50% 35%", landscape: false },
+      { src: "/photos/ana-selfie.webp", alt: "ანა ტყებუჩავას სელფი ეზოში, უკან ახალი ბილიკი", position: "50% 30%", landscape: false },
+      { src: "/photos/ana-firepit-aerial.webp", alt: "ცეცხლის კერის მოედანი და ბილიკი ზემოდან, მთების ფონზე", position: "50% 60%", landscape: false },
+      { src: "/photos/ana-terrace-seating.webp", alt: "ტერასის სავარძლები და მაგიდა LEGI-ს ფილებზე", position: "50% 50%", landscape: true },
+      { src: "/photos/ana-terrace-table.webp", alt: "მაგიდა ვაშლებით ტერასაზე, უკან დაგებული ფილები", position: "50% 50%", landscape: true },
+      { src: "/photos/ana-house-path.webp", alt: "სახლის შესასვლელი და ბილიკი LEGI-ს ფილებით", position: "50% 50%", landscape: true },
+    ] as (Photo & { position: string; landscape: boolean })[],
   },
   firepit: {
     eyebrow: "ცეცხლის კერა",
     title: "საღამოები კერის გარშემო",
     text: "ეზოს განახლებასთან ერთად ანამ ცეცხლის კერაც მოაწყო. LEGI-ს კერა იგივე ფილებით იწყობა, რომლითაც ბილიკი და ტერასაა დაგებული — ერთი მასალა, ერთი სტილი, მთელ ეზოში.",
-    // Showroom shots of the LEGI fire pit (two colourways) — not Ana's yard, so captions name the product, not her.
     photos: [
-      { src: "/photos/firepit-2.webp", alt: "LEGI-ს ცეცხლის კერა თბილი ტონის ფილებით", caption: "LEGI-ს ცეცხლის კერა · თბილი ტონი" },
-      { src: "/photos/firepit-1.webp", alt: "LEGI-ს ცეცხლის კერა ნაცრისფერი ფილებით", caption: "ნაცრისფერი ვარიანტი" },
+      { src: "/photos/ana-firepit.webp", alt: "ანას ცეცხლის კერა LEGI-ს ფილებით მოპირკეთებულ მოედანზე", caption: "ანას ცეცხლის კერა" },
+      { src: "/photos/ana-firepit-wide.webp", alt: "ცეცხლის კერის მოედანი და ბილიკი ეზოში", caption: "მოედანი და ბილიკი" },
     ] as (Photo & { caption: string })[],
     points: [
       {
@@ -145,7 +147,6 @@ export const t = {
         spec: "60 მმ · 150×150, 300×150, 300×300 მმ",
         text: "გლუვი ზედაპირი და დახვეწილი ფორმა — იდეალურია ეზოსა და სავალი გზისთვის.",
         regular: 41.5,
-        swatch: "#977258",
         photo: { src: "/photos/new-city-cappuccino.webp", alt: "ახალი ქალაქი — კაპუჩინო" } as Photo,
       },
       {
@@ -154,7 +155,6 @@ export const t = {
         spec: "40 მმ · 4 ზომის კომბინაცია",
         text: "ოთხი სხვადასხვა ზომის ფილა — ცოცხალი, მრავალფეროვანი ნახატი ერთფეროვნების გარეშე.",
         regular: 33,
-        swatch: "#a07c62",
         photo: { src: "/photos/mix-40-cappuccino.webp", alt: "მიქსი 40 მმ — კაპუჩინო" } as Photo,
       },
       {
@@ -163,7 +163,6 @@ export const t = {
         spec: "80 მმ · 800×400 მმ",
         text: "მსხვილფორმატიანი ფილა მინიმალური ნაკერით — თანამედროვე, სუფთა ვიზუალი.",
         regular: 48,
-        swatch: "#8c6a52",
         photo: { src: "/photos/grande-cappuccino.webp", alt: "Grande — კაპუჩინო" } as Photo,
       },
     ],

@@ -40,12 +40,9 @@ export default function Pricing() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <div className="flex items-center gap-3">
-                    <span className="h-7 w-7 shrink-0 ring-1 ring-stone-300" style={{ backgroundColor: prod.swatch }} />
-                    <h3 className="text-xl font-extrabold text-ink">
-                      {prod.name} <span className="text-stone-400">·</span> {prod.color}
-                    </h3>
-                  </div>
+                  <h3 className="text-xl font-extrabold text-ink">
+                    {prod.name} <span className="text-stone-400">·</span> {prod.color}
+                  </h3>
                   <p className="mt-2 text-sm font-semibold text-stone-500">{prod.spec}</p>
                   <p className="mt-3 text-sm leading-relaxed text-stone-500">{prod.text}</p>
 
