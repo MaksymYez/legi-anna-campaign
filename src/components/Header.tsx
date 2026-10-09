@@ -7,7 +7,7 @@ import { IconExternal, IconPhone } from "./icons";
 
 export function Logo({ className = "h-9" }: { className?: string }) {
   return (
-    <a href="#top" className="flex items-center select-none" aria-label="Legi — ვქმნით ხარისხს">
+    <a href="#top" className="flex items-center select-none" aria-label="Legi, ვქმნით ხარისხს">
       <Image
         src="/legi-logo.webp"
         alt="Legi"
@@ -127,7 +127,7 @@ export default function Header() {
               rel="noopener"
               className="mt-2 inline-flex items-center justify-center gap-2 border border-stone-300 py-2.5 text-sm font-bold uppercase tracking-wide text-stone-700"
             >
-              {t.nav.mainSite} — legi.ge
+              {t.nav.mainSite} · legi.ge
               <IconExternal className="h-4 w-4" />
             </a>
           </nav>

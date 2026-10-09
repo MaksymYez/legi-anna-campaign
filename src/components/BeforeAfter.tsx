@@ -100,7 +100,7 @@ function Slider({ pair }: { pair: Pair }) {
         max={100}
         value={Math.round(pos)}
         onChange={(e) => setPos(Number(e.target.value))}
-        aria-label={`${b.before} / ${b.after} — ${pair.label}`}
+        aria-label={`${b.before} / ${b.after}, ${pair.label}`}
         className="absolute inset-0 h-full w-full cursor-ew-resize opacity-0 pointer-events-none focus-visible:pointer-events-auto"
       />
     </div>

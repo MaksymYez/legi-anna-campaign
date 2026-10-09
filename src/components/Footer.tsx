@@ -21,7 +21,7 @@ export default function Footer() {
             rel="noopener"
             className="group inline-flex items-center justify-center gap-2 bg-red px-6 py-3.5 text-sm sm:text-base font-bold uppercase tracking-wide text-white hover:bg-red-dark transition-colors"
           >
-            {t.footer.mainSite} — legi.ge
+            {t.footer.mainSite} · legi.ge
             <IconExternal className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>

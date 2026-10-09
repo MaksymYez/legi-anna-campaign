@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://legi-ana-campaign.workers.dev",
   ),
-  title: "ანა ტყებუჩავას ეზო — −10% LEGI-ს ფილებზე | LEGI",
+  title: "ანა ტყებუჩავას ეზო: −10% LEGI-ს ფილებზე | LEGI",
   description:
-    "ანა ტყებუჩავამ ეზო LEGI-ს ფილებით განაახლა. ახალი ქალაქი, მიქსი და Grande კაპუჩინოს ფერში — ახლა 10%-იანი ფასდაკლებით.",
+    "ანა ტყებუჩავამ ეზო LEGI-ს ფილებით განაახლა. ახალი ქალაქი, მიქსი და Grande კაპუჩინოს ფერში, ახლა 10%-იანი ფასდაკლებით.",
   keywords: ["ბეტონის ფილა", "ტროტუარის ფილა", "ეზოს ფილა", "Grande", "ახალი ქალაქი", "LEGI", "ანა ტყებუჩავა"],
   openGraph: {
-    title: "ანა ტყებუჩავას ეზო — −10% LEGI-ს ფილებზე",
+    title: "ანა ტყებუჩავას ეზო: −10% LEGI-ს ფილებზე",
     description:
       "ნახე როგორ შეიცვალა ანას ეზო და მიიღე იგივე ფილები 10%-იანი ფასდაკლებით.",
     type: "website",
