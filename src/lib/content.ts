@@ -17,7 +17,8 @@ export function formatPrice(n: number): string {
 
 /**
  * Photos. Leave `src` as null to show a labelled placeholder; drop the real
- * file into /public/photos/ and set the path (e.g. "/photos/before-1.webp").
+ * file into /public/photos/ and set the path. File names follow the SEO
+ * pattern brand + product + subject, e.g. "/photos/legi-cappuccino-pavers-terrace-after.webp".
  */
 export type Photo = { src: string | null; alt: string };
 
@@ -42,7 +43,7 @@ export const t = {
     ctaSecondary: "ნახე ფასები",
     discountChip: "ფასდაკლება",
     photo: {
-      src: "/photos/ana-path.webp",
+      src: "/photos/legi-cappuccino-pavers-ana-tkebuchava-path.webp",
       alt: "ანა ტყებუჩავა თავის ეზოში, LEGI-ს კაპუჩინოს ფერის ფილების ბილიკზე",
     } as Photo,
     photoCaption: "ანა ტყებუჩავას ეზო · კაპუჩინო",
@@ -56,28 +57,28 @@ export const t = {
     pairs: [
       {
         label: "ბილიკი",
-        before: { src: "/photos/path-before.webp", alt: "ბილიკი სახლის წინ დაგებამდე" } as Photo,
-        after: { src: "/photos/path-after.webp", alt: "ბილიკი LEGI-ს ფილებითა და თეთრი ხრეშით" } as Photo,
+        before: { src: "/photos/legi-pavers-garden-path-before.webp", alt: "ბილიკი სახლის წინ დაგებამდე" } as Photo,
+        after: { src: "/photos/legi-cappuccino-pavers-garden-path-after.webp", alt: "ბილიკი LEGI-ს ფილებითა და თეთრი ხრეშით" } as Photo,
       },
       {
         label: "სახლის წინ",
-        before: { src: "/photos/house-before.webp", alt: "სახლის წინა ეზო დაგებამდე" } as Photo,
-        after: { src: "/photos/house-after.webp", alt: "სახლის წინა ეზო LEGI-ს ფილებით" } as Photo,
+        before: { src: "/photos/legi-pavers-front-yard-before.webp", alt: "სახლის წინა ეზო დაგებამდე" } as Photo,
+        after: { src: "/photos/legi-cappuccino-pavers-front-yard-after.webp", alt: "სახლის წინა ეზო LEGI-ს ფილებით" } as Photo,
       },
       {
         label: "ეზო",
-        before: { src: "/photos/yard-before.webp", alt: "ეზო დაგებამდე" } as Photo,
-        after: { src: "/photos/yard-after.webp", alt: "ეზო LEGI-ს ფილებით" } as Photo,
+        before: { src: "/photos/legi-pavers-backyard-before.webp", alt: "ეზო დაგებამდე" } as Photo,
+        after: { src: "/photos/legi-cappuccino-pavers-backyard-after.webp", alt: "ეზო LEGI-ს ფილებით" } as Photo,
       },
       {
         label: "ტერასა",
-        before: { src: "/photos/terrace-before.webp", alt: "ტერასა დაგებამდე" } as Photo,
-        after: { src: "/photos/terrace-after.webp", alt: "ტერასა LEGI-ს ფილებით" } as Photo,
+        before: { src: "/photos/legi-pavers-terrace-before.webp", alt: "ტერასა დაგებამდე" } as Photo,
+        after: { src: "/photos/legi-cappuccino-pavers-terrace-after.webp", alt: "ტერასა LEGI-ს ფილებით" } as Photo,
       },
       {
         label: "ტერასის ხედი",
-        before: { src: "/photos/terrace-view-before.webp", alt: "ხედი ტერასიდან დაგებამდე" } as Photo,
-        after: { src: "/photos/terrace-view-after.webp", alt: "ხედი ტერასიდან LEGI-ს ფილებით" } as Photo,
+        before: { src: "/photos/legi-pavers-terrace-view-before.webp", alt: "ხედი ტერასიდან დაგებამდე" } as Photo,
+        after: { src: "/photos/legi-cappuccino-pavers-terrace-view-after.webp", alt: "ხედი ტერასიდან LEGI-ს ფილებით" } as Photo,
       },
     ],
   },
@@ -86,12 +87,12 @@ export const t = {
     title: "ანა თავის ახალ ეზოში",
     text: "ბილიკი, ტერასა და საღამოს მზე — ასე გამოიყურება ეზო, როცა ფილები უკვე დაგებულია.",
     photos: [
-      { src: "/photos/ana-terrace.webp", alt: "ანა ტყებუჩავა ტერასაზე, წინ LEGI-ს ფილების ბილიკი", position: "50% 35%", landscape: false },
-      { src: "/photos/ana-selfie.webp", alt: "ანა ტყებუჩავას სელფი ეზოში, უკან ახალი ბილიკი", position: "50% 30%", landscape: false },
-      { src: "/photos/ana-firepit-aerial.webp", alt: "ცეცხლის კერის მოედანი და ბილიკი ზემოდან, მთების ფონზე", position: "50% 60%", landscape: false },
-      { src: "/photos/ana-terrace-seating.webp", alt: "ტერასის სავარძლები და მაგიდა LEGI-ს ფილებზე", position: "50% 50%", landscape: true },
-      { src: "/photos/ana-terrace-table.webp", alt: "მაგიდა ვაშლებით ტერასაზე, უკან დაგებული ფილები", position: "50% 50%", landscape: true },
-      { src: "/photos/ana-house-path.webp", alt: "სახლის შესასვლელი და ბილიკი LEGI-ს ფილებით", position: "50% 50%", landscape: true },
+      { src: "/photos/legi-cappuccino-pavers-ana-tkebuchava-terrace.webp", alt: "ანა ტყებუჩავა ტერასაზე, წინ LEGI-ს ფილების ბილიკი", position: "50% 35%", landscape: false },
+      { src: "/photos/legi-cappuccino-pavers-ana-tkebuchava-selfie.webp", alt: "ანა ტყებუჩავას სელფი ეზოში, უკან ახალი ბილიკი", position: "50% 30%", landscape: false },
+      { src: "/photos/legi-fire-pit-cappuccino-pavers-chair.webp", alt: "ცეცხლის კერა სავარძლით და შეშის კალათით, უკან სახლი", position: "50% 60%", landscape: false },
+      { src: "/photos/legi-cappuccino-pavers-terrace-seating.webp", alt: "ტერასის სავარძლები და მაგიდა LEGI-ს ფილებზე", position: "50% 50%", landscape: true },
+      { src: "/photos/legi-cappuccino-pavers-terrace-table.webp", alt: "მაგიდა ვაშლებით ტერასაზე, უკან დაგებული ფილები", position: "50% 50%", landscape: true },
+      { src: "/photos/legi-cappuccino-pavers-house-entrance-path.webp", alt: "სახლის შესასვლელი და ბილიკი LEGI-ს ფილებით", position: "50% 50%", landscape: true },
     ] as (Photo & { position: string; landscape: boolean })[],
   },
   firepit: {
@@ -99,21 +100,21 @@ export const t = {
     title: "საღამოები კერის გარშემო",
     text: "ეზოს განახლებასთან ერთად ანამ ცეცხლის კერაც მოაწყო. LEGI-ს კერა იგივე ფილებით იწყობა, რომლითაც ბილიკი და ტერასაა დაგებული — ერთი მასალა, ერთი სტილი, მთელ ეზოში.",
     photos: [
-      { src: "/photos/ana-firepit.webp", alt: "ანას ცეცხლის კერა LEGI-ს ფილებით მოპირკეთებულ მოედანზე", caption: "ანას ცეცხლის კერა" },
-      { src: "/photos/ana-firepit-wide.webp", alt: "ცეცხლის კერის მოედანი და ბილიკი ეზოში", caption: "მოედანი და ბილიკი" },
-    ] as (Photo & { caption: string })[],
+      { src: "/photos/legi-fire-pit-cappuccino-pavers-aerial-view.webp", alt: "ანას ცეცხლის კერის მოედანი და ბილიკი ზემოდან, გაზონსა და მთების ფონზე", caption: "ანას ცეცხლის კერა · ხედი ზემოდან", position: "50% 50%" },
+      { src: "/photos/legi-fire-pit-cappuccino-pavers-closeup.webp", alt: "ცეცხლის კერა ახლოდან — სავარძლები, ფარანი და შეშის კალათა", caption: "კერა ახლოდან", position: "50% 80%" },
+    ] as (Photo & { caption: string; position: string })[],
     points: [
       {
-        title: "ბეტონი არ იწვის",
-        text: "ბეტონის ფილა ცეცხლის კერის გარშემო უსაფრთხო, არაწვადი საფარია.",
+        title: "ბეტონი არის ცეცხლგამძლე",
+        text: "ფილები არის ცეცხლგამძლე და უძლებს მაღალ გრადუსს.",
       },
       {
-        title: "ადვილი მოვლა",
-        text: "ნაცარი და ნახშირის კვალი ფილიდან უბრალოდ ირეცხება.",
+        title: "როგორ მოვუაროთ",
+        text: "წყლის ნაკადით შესაძლებელია დაბინძურებული ადგილების მორეცხვა — არ სჭირდება ზედმეტი ძალისხმევა.",
       },
       {
-        title: "ერთიანი ხედი",
-        text: "კერა, ბილიკი და ტერასა ერთი ფერის ფილით — ეზო ერთ მთლიანობად იკითხება.",
+        title: "ვიზუალი",
+        text: "ბილიკის, ტერასისა და ბუხრის ერთ ტონში შეხამება გვაძლევს ლამაზ და დახვეწილ ვიზუალს.",
       },
     ],
     price: {
@@ -147,7 +148,7 @@ export const t = {
         spec: "60 მმ · 150×150, 300×150, 300×300 მმ",
         text: "გლუვი ზედაპირი და დახვეწილი ფორმა — იდეალურია ეზოსა და სავალი გზისთვის.",
         regular: 41.5,
-        photo: { src: "/photos/new-city-cappuccino.webp", alt: "ახალი ქალაქი — კაპუჩინო" } as Photo,
+        photo: { src: "/photos/legi-new-city-paver-cappuccino-60mm.webp", alt: "ახალი ქალაქი — კაპუჩინო" } as Photo,
       },
       {
         name: "მიქსი",
@@ -155,7 +156,7 @@ export const t = {
         spec: "40 მმ · 4 ზომის კომბინაცია",
         text: "ოთხი სხვადასხვა ზომის ფილა — ცოცხალი, მრავალფეროვანი ნახატი ერთფეროვნების გარეშე.",
         regular: 33,
-        photo: { src: "/photos/mix-40-cappuccino.webp", alt: "მიქსი 40 მმ — კაპუჩინო" } as Photo,
+        photo: { src: "/photos/legi-mix-paver-cappuccino-40mm.webp", alt: "მიქსი 40 მმ — კაპუჩინო" } as Photo,
       },
       {
         name: "Grande",
@@ -163,14 +164,14 @@ export const t = {
         spec: "80 მმ · 800×400 მმ",
         text: "მსხვილფორმატიანი ფილა მინიმალური ნაკერით — თანამედროვე, სუფთა ვიზუალი.",
         regular: 48,
-        photo: { src: "/photos/grande-cappuccino.webp", alt: "Grande — კაპუჩინო" } as Photo,
+        photo: { src: "/photos/legi-grande-paver-cappuccino-80mm.webp", alt: "Grande — კაპუჩინო" } as Photo,
       },
     ],
   },
   form: {
     eyebrow: "შეკვეთა",
-    title: "დაჯავშნე 10%-იანი ფასდაკლება",
-    text: "შეავსე ფორმა და ჩვენი გუნდი დაგიკავშირდება 24 საათში — გავთვლით საჭირო რაოდენობას და მოგცემთ ზუსტ ფასს აქციის ფასდაკლებით.",
+    title: "ისარგებლე 10%-იანი ფასდაკლებით",
+    text: "დაგვიტოვე საკონტაქტო ინფორმაცია და ჩვენ მალე დაგიკავშირდებით.",
     name: "სახელი და გვარი",
     phone: "ტელეფონი",
     submit: "გაგზავნა",

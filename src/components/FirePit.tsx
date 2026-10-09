@@ -16,14 +16,14 @@ export default function FirePit() {
           {/* Photos: large warm-tone shot + smaller grey variant overlapping its corner */}
           <div className="relative lg:col-span-6 sm:pr-16 sm:pb-16">
             <div className="relative aspect-[4/5] overflow-hidden ring-1 ring-white/10 shadow-lift">
-              <Photo photo={main} sizes="(max-width: 1024px) 100vw, 50vw" tone="dark" />
+              <Photo photo={main} sizes="(max-width: 1024px) 100vw, 50vw" tone="dark" position={main.position} />
               <div className="absolute bottom-4 left-4 bg-ink/80 backdrop-blur px-3 py-2 text-xs font-semibold text-white">
                 {main.caption}
               </div>
             </div>
 
             <div className="relative mt-4 aspect-[4/3] w-full overflow-hidden ring-1 ring-white/10 shadow-lift sm:absolute sm:bottom-0 sm:right-0 sm:mt-0 sm:w-[46%] sm:ring-4 sm:ring-ink">
-              <Photo photo={alt} sizes="(max-width: 640px) 100vw, 25vw" tone="dark" />
+              <Photo photo={alt} sizes="(max-width: 640px) 100vw, 25vw" tone="dark" position={alt.position} />
               <div className="absolute bottom-3 left-3 bg-ink/80 backdrop-blur px-2.5 py-1.5 text-[0.7rem] font-semibold text-white">
                 {alt.caption}
               </div>
