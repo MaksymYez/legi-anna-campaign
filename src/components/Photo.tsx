@@ -10,11 +10,14 @@ export default function Photo({
   sizes,
   priority = false,
   tone = "light",
+  position,
 }: {
   photo: PhotoData;
   sizes: string;
   priority?: boolean;
   tone?: "light" | "dark";
+  /** CSS object-position for the cover crop, e.g. "50% 20%" to favour the top. */
+  position?: string;
 }) {
   if (photo.src) {
     return (
@@ -25,6 +28,7 @@ export default function Photo({
         priority={priority}
         sizes={sizes}
         className="object-cover"
+        style={position ? { objectPosition: position } : undefined}
         draggable={false}
       />
     );

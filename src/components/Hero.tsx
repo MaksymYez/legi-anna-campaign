@@ -42,8 +42,8 @@ export default function Hero() {
 
           {/* Photo (mobile: 2nd · desktop: full-height right column) */}
           <div className="relative animate-fadeUp [animation-delay:120ms] order-2 md:col-start-2 md:row-start-1 md:row-span-2 md:self-stretch">
-            <div className="relative aspect-[4/5] sm:aspect-[16/10] md:aspect-auto md:h-full md:min-h-[520px] overflow-hidden shadow-lift ring-1 ring-stone-200">
-              <Photo photo={h.photo} sizes="(max-width: 768px) 100vw, 50vw" priority />
+            <div className="relative aspect-[4/5] md:aspect-auto md:h-full md:min-h-[640px] overflow-hidden shadow-lift ring-1 ring-stone-200">
+              <Photo photo={h.photo} sizes="(max-width: 768px) 100vw, 50vw" priority position="50% 0%" />
               <div className="hidden md:block absolute bottom-4 left-4 bg-ink/80 backdrop-blur px-3 py-2 text-xs font-semibold text-white">
                 {h.photoCaption}
               </div>
@@ -59,7 +59,7 @@ export default function Hero() {
             </div>
 
             {/* discount chip */}
-            <div className="absolute -top-5 -right-2 sm:-right-4 rotate-3 bg-red px-5 py-3 text-center shadow-lift">
+            <div className="absolute -top-5 -left-2 sm:-left-4 -rotate-3 bg-red px-5 py-3 text-center shadow-lift">
               <div className="font-latin text-4xl leading-none text-white">−{pct}%</div>
               <div className="mt-1 text-xs font-bold text-white/90">{h.discountChip}</div>
             </div>

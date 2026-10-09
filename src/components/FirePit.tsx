@@ -1,10 +1,13 @@
 import { t } from "@/lib/content";
 import Photo from "./Photo";
-import { IconArrow, IconFlame } from "./icons";
+import { IconArrow, IconCheck, IconClock, IconFlame } from "./icons";
 
 export default function FirePit() {
   const f = t.firepit;
   const [main, alt] = f.photos;
+  const { price } = f;
+  const pct = Math.round((1 - price.campaign / price.regular) * 100);
+  const save = price.regular - price.campaign;
 
   return (
     <section id="firepit" className="bg-concrete text-white py-14 sm:py-20 lg:py-28 scroll-mt-16">
@@ -53,13 +56,52 @@ export default function FirePit() {
               ))}
             </ul>
 
-            <a
-              href="#contact"
-              className="group mt-8 inline-flex items-center gap-2 bg-red px-6 py-3.5 text-sm sm:text-base font-bold uppercase tracking-wide text-white shadow-lift hover:bg-red-light transition-colors"
-            >
-              {f.cta}
-              <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            {/* Price card */}
+            <div className="relative mt-8 max-w-md bg-white text-ink shadow-lift">
+              <span className="absolute -top-4 right-4 bg-red px-3 py-1.5 font-latin text-xl leading-none text-white shadow-lift">
+                −{pct}%
+              </span>
+              <div className="p-6">
+                <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-red">
+                  <IconClock className="h-4 w-4" />
+                  {price.limited}
+                </p>
+                <div className="mt-4 grid grid-cols-2 gap-3 border-t border-stone-200 pt-4">
+                  <div>
+                    <div className="text-[0.7rem] font-semibold uppercase tracking-wide text-stone-500">
+                      {price.regularLabel}
+                    </div>
+                    <div className="mt-1.5 text-stone-400">
+                      <s className="text-xl font-bold decoration-red decoration-2">{price.regular}</s>
+                      <span className="ml-1 text-xs">{price.unit}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-[0.7rem] font-semibold uppercase tracking-wide text-red">
+                      {price.campaignLabel}
+                    </div>
+                    <div className="mt-1">
+                      <span className="text-3xl font-extrabold text-ink">{price.campaign}</span>
+                      <span className="ml-1 text-sm text-stone-500">{price.unit}</span>
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-3 text-sm font-semibold text-red">
+                  {price.save} {save} {price.unit}
+                </p>
+                <p className="mt-3 flex items-start gap-2 text-sm text-stone-500">
+                  <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-red" />
+                  {price.includes}
+                </p>
+                <a
+                  href="#contact"
+                  className="group mt-5 flex items-center justify-center gap-2 bg-red px-5 py-3.5 text-sm sm:text-base font-bold uppercase tracking-wide text-white transition-colors hover:bg-red-dark"
+                >
+                  {price.cta}
+                  <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

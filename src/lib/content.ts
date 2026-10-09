@@ -1,6 +1,5 @@
-// TODO: replace with the campaign's dedicated phone number.
-export const PHONE = "+995 5XX XX XX XX";
-export const PHONE_HREF = "+9955XXXXXXXX";
+export const PHONE = "+995 577 12 09 18";
+export const PHONE_HREF = "+995577120918";
 
 export const MAIN_SITE = "https://legi.ge";
 
@@ -43,8 +42,8 @@ export const t = {
     ctaSecondary: "ნახე ფასები",
     discountChip: "ფასდაკლება",
     photo: {
-      src: "/photos/house-after.webp",
-      alt: "ანა ტყებუჩავას ეზო LEGI-ს კაპუჩინოს ფერის ფილებით",
+      src: "/photos/ana-path.webp",
+      alt: "ანა ტყებუჩავა თავის ეზოში, LEGI-ს კაპუჩინოს ფერის ფილების ბილიკზე",
     } as Photo,
     photoCaption: "ანა ტყებუჩავას ეზო · კაპუჩინო",
   },
@@ -82,6 +81,16 @@ export const t = {
       },
     ],
   },
+  gallery: {
+    eyebrow: "ანა ეზოში",
+    title: "ანა თავის ახალ ეზოში",
+    text: "ბილიკი, ტერასა და საღამოს მზე — ასე გამოიყურება ეზო, როცა ფილები უკვე დაგებულია.",
+    photos: [
+      { src: "/photos/ana-terrace.webp", alt: "ანა ტყებუჩავა ტერასაზე, წინ LEGI-ს ფილების ბილიკი", position: "50% 35%" },
+      { src: "/photos/ana-selfie.webp", alt: "ანა ტყებუჩავას სელფი ეზოში, უკან ახალი ბილიკი", position: "50% 30%" },
+      { src: "/photos/ana-terrace-standing.webp", alt: "ანა ტყებუჩავა სახლის წინ, LEGI-ს ფილებით დაგებული ეზო", position: "50% 35%" },
+    ] as (Photo & { position: string })[],
+  },
   firepit: {
     eyebrow: "ცეცხლის კერა",
     title: "საღამოები კერის გარშემო",
@@ -105,6 +114,17 @@ export const t = {
         text: "კერა, ბილიკი და ტერასა ერთი ფერის ფილით — ეზო ერთ მთლიანობად იკითხება.",
       },
     ],
+    price: {
+      regular: 1990,
+      campaign: 1300,
+      unit: "₾",
+      regularLabel: "ჩვეულებრივი ფასი",
+      campaignLabel: "აქციის ფასი",
+      save: "დაზოგე",
+      limited: "შეზღუდული დროით",
+      includes: "ფასში შედის ლითონის და ბეტონის ნაწილები — სრული კომპლექტი.",
+      cta: "შეუკვეთე კერა",
+    },
     cta: "მინდა ასეთი ეზო",
   },
   pricing: {
@@ -131,12 +151,11 @@ export const t = {
       {
         name: "მიქსი",
         color: "კაპუჩინო",
-        spec: "60 მმ · 4 ზომის კომბინაცია",
+        spec: "40 მმ · 4 ზომის კომბინაცია",
         text: "ოთხი სხვადასხვა ზომის ფილა — ცოცხალი, მრავალფეროვანი ნახატი ერთფეროვნების გარეშე.",
-        regular: 40,
+        regular: 33,
         swatch: "#a07c62",
-        // TODO: legi.ge has no Mix Cappuccino shot yet — this is a 60 mm Mix photo in a warmer tone.
-        photo: { src: "/photos/mix-60.webp", alt: "ფილა მიქსი ეზოში" } as Photo,
+        photo: { src: "/photos/mix-40-cappuccino.webp", alt: "მიქსი 40 მმ — კაპუჩინო" } as Photo,
       },
       {
         name: "Grande",
