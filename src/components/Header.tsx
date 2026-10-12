@@ -5,9 +5,9 @@ import Image from "next/image";
 import { t, PHONE, PHONE_HREF, MAIN_SITE } from "@/lib/content";
 import { IconExternal, IconPhone } from "./icons";
 
-export function Logo({ className = "h-9" }: { className?: string }) {
+export function Logo({ className = "h-7 sm:h-9" }: { className?: string }) {
   return (
-    <a href="#top" className="flex items-center select-none" aria-label="Legi, ვქმნით ხარისხს">
+    <a href="#top" className="flex shrink-0 items-center select-none" aria-label="Legi, ვქმნით ხარისხს">
       <Image
         src="/legi-logo.webp"
         alt="Legi"
@@ -69,10 +69,11 @@ export default function Header() {
               href={MAIN_SITE}
               target="_blank"
               rel="noopener"
-              className="hidden lg:inline-flex items-center gap-1.5 border border-stone-300 px-3 py-2 text-xs font-bold uppercase tracking-wide text-stone-600 hover:border-red hover:text-red transition-colors"
+              className="inline-flex items-center gap-1 border border-stone-300 px-2 sm:px-2.5 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wide text-stone-600 hover:border-ink hover:text-ink transition-colors"
             >
-              {t.nav.mainSite}
-              <IconExternal className="h-3.5 w-3.5" />
+              <span className="hidden sm:inline">{t.nav.mainSite}</span>
+              <span className="sm:hidden">legi.ge</span>
+              <IconExternal className="hidden sm:block h-3 w-3" />
             </a>
 
             <a
@@ -85,14 +86,14 @@ export default function Header() {
 
             <a
               href="#contact"
-              className="inline-flex items-center bg-red px-4 py-2 text-sm font-bold uppercase tracking-wide text-white hover:bg-red-dark transition-colors"
+              className="inline-flex items-center bg-red px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wide text-white shadow-sm hover:bg-red-dark transition-colors"
             >
               {t.nav.cta}
             </a>
 
             <button
               onClick={() => setOpen((v) => !v)}
-              className="md:hidden ml-1 inline-flex h-9 w-9 items-center justify-center border border-stone-300"
+              className="md:hidden sm:ml-1 inline-flex h-9 w-9 items-center justify-center border border-stone-300"
               aria-label="Menu"
             >
               <span className="flex flex-col gap-1">
