@@ -139,6 +139,8 @@ export const t = {
       poster: "/photos/legi-fire-pit-kit-exploded-view.webp",
       label: "ცეცხლის კერის კომპლექტის ანიმაცია: ლითონის ჩასადგმელი და ბეტონის ბლოკები ზომებით",
       caption: "კერა ნაწილებად · ზომები სმ-ში",
+      play: "ანიმაციის ნახვა",
+      replay: "თავიდან ნახვა",
     },
     parts: [
       {

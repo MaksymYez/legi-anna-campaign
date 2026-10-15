@@ -21,17 +21,14 @@ export default function FirePitKit() {
 
           {/* Exploded-view animation (portrait) */}
           <div className="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2 lg:self-center">
-            <div className="relative mx-auto w-full max-w-[22rem] lg:max-w-none overflow-hidden bg-white ring-1 ring-stone-200 shadow-lift">
-              <KitVideo
-                src={k.video.src}
-                poster={k.video.poster}
-                label={k.video.label}
-                className="block aspect-[9/16] w-full object-cover"
-              />
-              <div className="absolute bottom-4 left-4 bg-ink/80 backdrop-blur px-3 py-2 text-xs font-semibold text-white">
-                {k.video.caption}
-              </div>
-            </div>
+            <KitVideo
+              src={k.video.src}
+              poster={k.video.poster}
+              label={k.video.label}
+              caption={k.video.caption}
+              playLabel={k.video.play}
+              replayLabel={k.video.replay}
+            />
           </div>
 
           <div className="lg:col-span-7 lg:col-start-1 lg:row-start-2">
