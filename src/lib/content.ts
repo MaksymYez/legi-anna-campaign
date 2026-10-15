@@ -22,6 +22,18 @@ export function formatPrice(n: number): string {
  */
 export type Photo = { src: string | null; alt: string };
 
+export type Product = {
+  name: string;
+  color: string;
+  spec: string;
+  text: string;
+  /** Regular price per m², before the campaign discount. */
+  regular: number;
+  /** Regular price per piece, for pavers that are also sold individually. */
+  regularPiece?: number;
+  photo: Photo;
+};
+
 export const t = {
   slogan: "ვქმნით ხარისხს!",
   nav: {
@@ -170,9 +182,12 @@ export const t = {
     regular: "სტანდარტული ფასი",
     campaign: "აქციის ფასი",
     unit: "₾ / მ²",
+    pieceUnit: "₾ / ცალი",
+    perPiece: "ცალობით",
+    pieceNote: "ცალობით 30 ცალამდე. 30 ცალიდან მ²-ის ფასი მოქმედებს, რაც უფრო იაფია.",
     save: "დაზოგე",
     cta: "შეუკვეთე",
-    note: "ფასები მითითებულია კვადრატულ მეტრზე (მ²), დღგ-ს ჩათვლით. ფასდაკლება ვრცელდება მხოლოდ ამ გვერდზე ნაჩვენებ ფილებზე.",
+    note: "ფასები მითითებულია კვადრატულ მეტრზე (მ²), Grande კი ცალობითაც, დღგ-ს ჩათვლით. ფასდაკლება ვრცელდება მხოლოდ ამ გვერდზე ნაჩვენებ ფილებზე.",
     products: [
       {
         name: "ახალი ქალაქი",
@@ -196,9 +211,10 @@ export const t = {
         spec: "80 მმ · 800×400 მმ",
         text: "მსხვილი ფორმატის ფილა მინიმალური ნაკერით: თანამედროვე და სუფთა ვიზუალი.",
         regular: 48,
+        regularPiece: 24,
         photo: { src: "/photos/legi-grande-paver-cappuccino-80mm.webp", alt: "Grande, კაპუჩინო" } as Photo,
       },
-    ],
+    ] as Product[],
   },
   form: {
     eyebrow: "შეკვეთა",

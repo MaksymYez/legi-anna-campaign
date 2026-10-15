@@ -71,6 +71,17 @@ export default function Pricing() {
                       {p.save} {save} {p.unit}
                     </p>
 
+                    {/* Per-piece price, for pavers that are also sold individually */}
+                    {prod.regularPiece !== undefined && (
+                      <p className="mt-3 flex flex-wrap items-baseline gap-x-2 border-t border-stone-200 pt-3 text-sm text-stone-500">
+                        <span className="text-[0.7rem] font-semibold uppercase tracking-wide">{p.perPiece}</span>
+                        <s className="decoration-red decoration-2">{formatPrice(prod.regularPiece)}</s>
+                        <span className="text-lg font-extrabold text-ink">{discounted(prod.regularPiece)}</span>
+                        <span className="text-xs">{p.pieceUnit}</span>
+                        <span className="mt-1 w-full text-xs leading-snug text-stone-500">{p.pieceNote}</span>
+                      </p>
+                    )}
+
                     <a
                       href="#contact"
                       className="mt-5 flex items-center justify-center gap-1.5 bg-ink px-4 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red"
