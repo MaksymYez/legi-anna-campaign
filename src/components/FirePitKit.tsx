@@ -1,6 +1,6 @@
 import { t } from "@/lib/content";
 import KitVideo from "./KitVideo";
-import MobileCollapse from "./MobileCollapse";
+import Accordion from "./Accordion";
 import { IconArrow, IconCheck, IconFlame } from "./icons";
 
 export default function FirePitKit() {
@@ -64,12 +64,16 @@ export default function FirePitKit() {
               ))}
             </ol>
 
-            {/* Dry-stack assembly: three steps, no glue, no mortar */}
-            <div className="mt-6 border border-stone-200 bg-white p-6 shadow-soft">
-              <h3 className="text-lg font-extrabold text-ink">
-                {k.assembly.title}
-              </h3>
-              <ul className="mt-3 flex flex-wrap gap-2">
+            {/* Dry-stack assembly: optional detail, collapsed by default */}
+            <Accordion
+              className="mt-6 border border-stone-200 bg-white shadow-soft"
+              title={
+                <h3 className="text-lg font-extrabold text-ink">
+                  {k.assembly.title}
+                </h3>
+              }
+            >
+              <ul className="flex flex-wrap gap-2">
                 {k.assembly.chips.map((chip) => (
                   <li
                     key={chip}
@@ -79,29 +83,27 @@ export default function FirePitKit() {
                   </li>
                 ))}
               </ul>
-              <MobileCollapse moreLabel={k.more} lessLabel={k.less}>
-                <p className="mt-4 text-sm leading-relaxed text-stone-500">
-                  {k.assembly.lead}
-                </p>
-                <ol className="mt-5 grid gap-4 border-t border-stone-200 pt-5 sm:grid-cols-3">
-                  {k.assembly.steps.map((step, i) => (
-                    <li key={step.title} className="flex gap-3">
-                      <span className="font-latin text-xl leading-none text-red">
-                        0{i + 1}
-                      </span>
-                      <div>
-                        <h4 className="text-sm font-extrabold text-ink">
-                          {step.title}
-                        </h4>
-                        <p className="mt-1 text-sm leading-relaxed text-stone-500">
-                          {step.text}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-              </MobileCollapse>
-            </div>
+              <p className="mt-4 text-sm leading-relaxed text-stone-500">
+                {k.assembly.lead}
+              </p>
+              <ol className="mt-5 grid gap-4 border-t border-stone-200 pt-5 sm:grid-cols-3">
+                {k.assembly.steps.map((step, i) => (
+                  <li key={step.title} className="flex gap-3">
+                    <span className="font-latin text-xl leading-none text-red">
+                      0{i + 1}
+                    </span>
+                    <div>
+                      <h4 className="text-sm font-extrabold text-ink">
+                        {step.title}
+                      </h4>
+                      <p className="mt-1 text-sm leading-relaxed text-stone-500">
+                        {step.text}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </Accordion>
 
             <ul className="mt-6 space-y-2 text-sm text-stone-600">
               <li className="flex items-start gap-2 font-semibold">
@@ -115,17 +117,21 @@ export default function FirePitKit() {
             </ul>
 
             {/* Fire-resistance disclaimer */}
-            <div className="mt-6 border-l-2 border-red bg-stone-50 p-5">
-              <h3 className="flex items-center gap-2 text-sm font-extrabold text-ink">
-                <IconFlame className="h-4 w-4 text-red" />
-                {k.disclaimer.title}
-              </h3>
-              <MobileCollapse moreLabel={k.more} lessLabel={k.less}>
-                <p className="mt-2 text-sm leading-relaxed text-stone-500">
-                  {k.disclaimer.text}
-                </p>
-              </MobileCollapse>
-            </div>
+            <Accordion
+              className="mt-6 border-l-2 border-red bg-stone-50"
+              headerClassName="p-5"
+              bodyClassName="px-5 pb-5"
+              title={
+                <h3 className="flex items-center gap-2 text-sm font-extrabold text-ink">
+                  <IconFlame className="h-4 w-4 text-red" />
+                  {k.disclaimer.title}
+                </h3>
+              }
+            >
+              <p className="text-sm leading-relaxed text-stone-500">
+                {k.disclaimer.text}
+              </p>
+            </Accordion>
 
             <a
               href="#contact"
