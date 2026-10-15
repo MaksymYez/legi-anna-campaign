@@ -33,9 +33,9 @@ export default function Header() {
 
   const links = [
     { href: "#result", label: t.nav.result },
-    { href: "#firepit", label: t.nav.firepit },
     { href: "#products", label: t.nav.products },
     { href: "#pricing", label: t.nav.pricing },
+    { href: "#firepit", label: t.nav.firepit },
     { href: "#contact", label: t.nav.contact },
   ];
 

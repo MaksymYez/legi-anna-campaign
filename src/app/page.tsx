@@ -16,9 +16,9 @@ export default function Home() {
         <Hero />
         <BeforeAfter />
         <Gallery />
+        <Pricing />
         <FirePit />
         <FirePitKit />
-        <Pricing />
         <LeadForm />
       </main>
       <Footer />
