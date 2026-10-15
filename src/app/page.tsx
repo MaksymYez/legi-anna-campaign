@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import BeforeAfter from "@/components/BeforeAfter";
 import Gallery from "@/components/Gallery";
 import FirePit from "@/components/FirePit";
+import FirePitKit from "@/components/FirePitKit";
 import Pricing from "@/components/Pricing";
 import LeadForm from "@/components/LeadForm";
 import Footer from "@/components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
         <BeforeAfter />
         <Gallery />
         <FirePit />
+        <FirePitKit />
         <Pricing />
         <LeadForm />
       </main>
