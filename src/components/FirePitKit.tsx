@@ -20,7 +20,7 @@ export default function FirePitKit() {
           </div>
 
           {/* Exploded-view animation (portrait) */}
-          <div className="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2 lg:self-center">
+          <div className="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2 lg:self-start lg:sticky lg:top-24">
             <KitVideo
               src={k.video.src}
               poster={k.video.poster}
