@@ -87,7 +87,7 @@ export const t = {
   gallery: {
     eyebrow: "ანას ეზოში",
     title: "ანა თავის ახალ ეზოში",
-    text: "ბილიკი, ტერასა და საღამოს მზე. ასე გამოიყურება ეზო, როცა ფილები უკვე დაგებულია.",
+    text: "ბილიკი, ტერასა და დაისი. ასე გამოიყურება ეზო, როცა ფილები უკვე დაგებულია.",
     photos: [
       { src: "/photos/legi-cappuccino-pavers-ana-tkebuchava-terrace.webp", alt: "ანა ტყებუჩავა ტერასაზე, წინ LEGI-ს ფილების ბილიკი", position: "50% 35%", landscape: false },
       { src: "/photos/legi-cappuccino-pavers-ana-tkebuchava-selfie.webp", alt: "ანა ტყებუჩავას სელფი ეზოში, უკან ახალი ბილიკი", position: "50% 30%", landscape: false },
