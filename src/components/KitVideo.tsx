@@ -65,7 +65,7 @@ export default function KitVideo({
   const showButton = state === "ended" || (state === "idle" && reducedMotion);
 
   return (
-    <div className="mx-auto w-full max-w-[22rem] lg:max-w-none bg-white ring-1 ring-stone-200 shadow-lift">
+    <div className="mx-auto w-full max-w-[20rem] lg:max-w-none bg-white ring-1 ring-stone-200 shadow-lift">
       <video
         ref={ref}
         className="block aspect-[9/16] w-full object-cover"

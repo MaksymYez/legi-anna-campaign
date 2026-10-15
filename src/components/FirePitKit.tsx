@@ -1,12 +1,13 @@
 import { t } from "@/lib/content";
 import KitVideo from "./KitVideo";
+import MobileCollapse from "./MobileCollapse";
 import { IconArrow, IconCheck, IconFlame } from "./icons";
 
 export default function FirePitKit() {
   const k = t.kit;
 
   return (
-    <section id="kit" className="bg-white py-14 sm:py-20 lg:py-28 scroll-mt-16">
+    <section id="kit" className="bg-white py-10 sm:py-20 lg:py-28 scroll-mt-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {/* Mobile: intro → video → parts. Desktop: copy left, video spanning both rows on the right. */}
         <div className="grid gap-8 lg:grid-cols-12 lg:grid-rows-[auto_auto] lg:gap-x-14 lg:gap-y-8">
@@ -16,7 +17,9 @@ export default function FirePitKit() {
               {k.title}
             </h2>
             <div className="red-rule mt-4 w-24" />
-            <p className="mt-5 max-w-xl text-stone-600 leading-relaxed">{k.text}</p>
+            <p className="mt-5 max-w-xl text-stone-600 leading-relaxed">
+              {k.text}
+            </p>
           </div>
 
           {/* Exploded-view animation (portrait) */}
@@ -34,10 +37,19 @@ export default function FirePitKit() {
           <div className="lg:col-span-7 lg:col-start-1 lg:row-start-2">
             <ol className="grid gap-5 sm:grid-cols-2">
               {k.parts.map((part, i) => (
-                <li key={part.title} className="flex flex-col border border-stone-200 bg-stone-50 p-6 shadow-soft">
-                  <span className="font-latin text-2xl leading-none text-red">0{i + 1}</span>
-                  <h3 className="mt-3 text-lg font-extrabold text-ink">{part.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-stone-500">{part.text}</p>
+                <li
+                  key={part.title}
+                  className="flex flex-col border border-stone-200 bg-stone-50 p-6 shadow-soft"
+                >
+                  <span className="font-latin text-2xl leading-none text-red">
+                    0{i + 1}
+                  </span>
+                  <h3 className="mt-3 text-lg font-extrabold text-ink">
+                    {part.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                    {part.text}
+                  </p>
                   <ul className="mt-4 flex flex-wrap gap-2 border-t border-stone-200 pt-4">
                     {part.specs.map((spec) => (
                       <li
@@ -54,26 +66,41 @@ export default function FirePitKit() {
 
             {/* Dry-stack assembly: three steps, no glue, no mortar */}
             <div className="mt-6 border border-stone-200 bg-white p-6 shadow-soft">
-              <h3 className="text-lg font-extrabold text-ink">{k.assembly.title}</h3>
+              <h3 className="text-lg font-extrabold text-ink">
+                {k.assembly.title}
+              </h3>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {k.assembly.chips.map((chip) => (
-                  <li key={chip} className="bg-red px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                  <li
+                    key={chip}
+                    className="bg-red px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-white"
+                  >
                     {chip}
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-sm leading-relaxed text-stone-500">{k.assembly.lead}</p>
-              <ol className="mt-5 grid gap-4 border-t border-stone-200 pt-5 sm:grid-cols-3">
-                {k.assembly.steps.map((step, i) => (
-                  <li key={step.title} className="flex gap-3">
-                    <span className="font-latin text-xl leading-none text-red">0{i + 1}</span>
-                    <div>
-                      <h4 className="text-sm font-extrabold text-ink">{step.title}</h4>
-                      <p className="mt-1 text-sm leading-relaxed text-stone-500">{step.text}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
+              <MobileCollapse moreLabel={k.more} lessLabel={k.less}>
+                <p className="mt-4 text-sm leading-relaxed text-stone-500">
+                  {k.assembly.lead}
+                </p>
+                <ol className="mt-5 grid gap-4 border-t border-stone-200 pt-5 sm:grid-cols-3">
+                  {k.assembly.steps.map((step, i) => (
+                    <li key={step.title} className="flex gap-3">
+                      <span className="font-latin text-xl leading-none text-red">
+                        0{i + 1}
+                      </span>
+                      <div>
+                        <h4 className="text-sm font-extrabold text-ink">
+                          {step.title}
+                        </h4>
+                        <p className="mt-1 text-sm leading-relaxed text-stone-500">
+                          {step.text}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </MobileCollapse>
             </div>
 
             <ul className="mt-6 space-y-2 text-sm text-stone-600">
@@ -93,7 +120,11 @@ export default function FirePitKit() {
                 <IconFlame className="h-4 w-4 text-red" />
                 {k.disclaimer.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-stone-500">{k.disclaimer.text}</p>
+              <MobileCollapse moreLabel={k.more} lessLabel={k.less}>
+                <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                  {k.disclaimer.text}
+                </p>
+              </MobileCollapse>
             </div>
 
             <a
