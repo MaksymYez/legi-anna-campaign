@@ -1,5 +1,5 @@
 import { t } from "@/lib/content";
-import Photo from "./Photo";
+import GalleryGrid from "./GalleryGrid";
 
 export default function Gallery() {
   const g = t.gallery;
@@ -15,22 +15,7 @@ export default function Gallery() {
           <p className="mt-4 text-stone-600 leading-relaxed">{g.text}</p>
         </div>
 
-        <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5">
-          {g.photos.map((photo) => (
-            <li
-              key={photo.src}
-              className={`relative overflow-hidden shadow-soft ring-1 ring-stone-200 ${
-                photo.landscape ? "aspect-square sm:aspect-[4/3]" : "aspect-square sm:aspect-[3/4]"
-              }`}
-            >
-              <Photo
-                photo={photo}
-                sizes="(max-width: 640px) 100vw, (max-width: 1152px) 33vw, 384px"
-                position={photo.position}
-              />
-            </li>
-          ))}
-        </ul>
+        <GalleryGrid photos={g.photos} labels={g.lightbox} />
       </div>
     </section>
   );
