@@ -38,7 +38,7 @@ export const t = {
     eyebrow: "ანა ტყებუჩავა × LEGI",
     title: "ანას ახალი ეზო",
     subtitle: "ახალი ქალაქი, მიქსი და Grande კაპუჩინოს ფერში",
-    lead: "ანა ტყებუჩავამ ეზო LEGI-ს ფილებით განაახლა და ცეცხლის კერაც მოაწყო. იგივე ფილები ახლა შენთვის 10%-იანი ფასდაკლებით, შეზღუდული დროით.",
+    lead: "ანა ტყებუჩავამ ეზო LEGI-ის ფილებით განაახლა და ეზოს გარე ბუხარიც მოაწყო. ზუსტად იგივე ფილები ახლა შენთვის 10%-იანი ფასდაკლებითაა, შეზღუდული დროით.",
     ctaPrimary: "მიიღე ფასდაკლება",
     ctaSecondary: "ნახე ფასები",
     discountChip: "ფასდაკლება",
@@ -61,11 +61,6 @@ export const t = {
         after: { src: "/photos/legi-cappuccino-pavers-garden-path-after.webp", alt: "ბილიკი LEGI-ს ფილებითა და თეთრი ხრეშით" } as Photo,
       },
       {
-        label: "სახლის წინ",
-        before: { src: "/photos/legi-pavers-front-yard-before.webp", alt: "სახლის წინა ეზო დაგებამდე" } as Photo,
-        after: { src: "/photos/legi-cappuccino-pavers-front-yard-after.webp", alt: "სახლის წინა ეზო LEGI-ს ფილებით" } as Photo,
-      },
-      {
         label: "ეზო",
         before: { src: "/photos/legi-pavers-backyard-before.webp", alt: "ეზო დაგებამდე" } as Photo,
         after: { src: "/photos/legi-cappuccino-pavers-backyard-after.webp", alt: "ეზო LEGI-ს ფილებით" } as Photo,
@@ -74,11 +69,6 @@ export const t = {
         label: "ტერასა",
         before: { src: "/photos/legi-pavers-terrace-before.webp", alt: "ტერასა დაგებამდე" } as Photo,
         after: { src: "/photos/legi-cappuccino-pavers-terrace-after.webp", alt: "ტერასა LEGI-ს ფილებით" } as Photo,
-      },
-      {
-        label: "ტერასის ხედი",
-        before: { src: "/photos/legi-pavers-terrace-view-before.webp", alt: "ხედი ტერასიდან დაგებამდე" } as Photo,
-        after: { src: "/photos/legi-cappuccino-pavers-terrace-view-after.webp", alt: "ხედი ტერასიდან LEGI-ს ფილებით" } as Photo,
       },
     ],
   },
